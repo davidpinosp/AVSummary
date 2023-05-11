@@ -1,0 +1,89 @@
+/* Background */
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+.hidden {
+  display: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Text BOX */
+.box {
+  width: 800px;
+  height: 700px;
+  background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 50px auto;
+  overflow: hidden;
+  text-align: center;
+}
+.btn2 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  background-color: #1d41b6; /* Modern green background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.btn2:hover {
+  background-color: #1d41b6; /* Darker background color on hover */
+}
+
+/* login box */
+
+.login-box {
+  width: 300px;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h2 {
+  text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.login-box input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1d41b6;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box input[type="submit"]:hover {
+  background-color: #1d41b6;
+  color: #1d41b6;
+}
