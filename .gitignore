@@ -32,3 +32,5 @@ build/
 prototype.py
 
 keys.txt
+
+.DS_Store
