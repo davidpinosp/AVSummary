@@ -1,0 +1,50 @@
+{%extends "index.html"%} {%block main%}
+
+<div class="box">
+  <h1>Speech-to-Text</h1>
+
+  <form enctype="multipart/form-data">
+    <input type="file" id="audioFileInput" name="audioFile" />
+    <button type="button" id="uploadButton">Upload</button>
+  </form>
+
+  <div id="resultContainer"></div>
+
+  <script>
+    document
+      .getElementById("uploadButton")
+      .addEventListener("click", handleUpload);
+
+    function handleUpload() {
+      const fileInput = document.getElementById("audioFileInput");
+      const file = fileInput.files[0];
+
+      if (file) {
+        const formData = new FormData();
+        formData.append("audioFile", file);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/process-audio", true);
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              const response = JSON.parse(xhr.responseText);
+              const transcript = response.transcript;
+              document.getElementById("resultContainer").textContent =
+                transcript;
+            } else {
+              console.error("Error:", xhr.status);
+            }
+          }
+        };
+
+        xhr.send(formData);
+      } else {
+        alert("Please select an audio file.");
+      }
+    }
+  </script>
+</div>
+
+{%endblock%}

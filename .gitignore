@@ -12,7 +12,7 @@ instance/
 .vscode/
 
 # Environment related
-.env
+.env/
 
 # Logs
 *.log
@@ -28,3 +28,7 @@ your_database.db
 *.egg-info/
 dist/
 build/
+
+prototype.py
+
+keys.txt
