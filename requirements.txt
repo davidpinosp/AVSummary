@@ -23,3 +23,6 @@ urllib3==2.0.2
 Werkzeug==2.3.4
 yarl==1.9.2
 zipp==3.15.0
+
+
+# export GOOGLE_APPLICATION_CREDENTIALS='/Users/davidpinosproano/Desktop/keys.json'

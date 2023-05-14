@@ -1,8 +1,9 @@
 import json
-from flask import Flask, render_template, request, redirect, url_for, Blueprint, jsonify
+from flask import Flask, render_template, request, redirect, url_for, Blueprint, jsonify, flash
 from .utils.audio_processing import get_transcription_and_summary
 import tempfile
 import os
+from flask_login import login_user, login_required, logout_user, current_user
 # //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
 
 
@@ -17,13 +18,14 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def index():
-    return render_template('index.html')
+    print(current_user.is_authenticated)
+    return render_template('index.html', user=current_user)
 
 
 @views.route('main')
+@login_required
 def main():
-
-    return render_template('main.html')
+    return render_template('main.html', user=current_user)
 
 
 @views.route('/process-audio', methods=['POST'])

@@ -2,6 +2,9 @@
 from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
+#  database structure
+
+#  entries for summary
 
 
 class Note(db.Model):
@@ -9,6 +12,8 @@ class Note(db.Model):
     data = db.Column(db.String(10000))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+#  user credentials
 
 
 class User(db.Model, UserMixin):
