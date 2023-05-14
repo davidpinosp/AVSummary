@@ -7,8 +7,11 @@
     <input type="file" id="audioFileInput" name="audioFile" />
     <button type="button" id="uploadButton">Upload</button>
   </form>
-
-  <div id="resultContainer"></div>
+  <form action="/save-input" method="POST">
+    <!-- <div id="resultContainer" name="ResultText"></div> -->
+    <textarea id="resultContainer" name="resultText"></textarea>
+    <button type="submit">Save</button>
+  </form>
 
   <script>
     document
@@ -31,6 +34,7 @@
             if (xhr.status === 200) {
               const response = JSON.parse(xhr.responseText);
               const transcript = response.transcript;
+              // aqui va el text field
               document.getElementById("resultContainer").textContent =
                 transcript;
             } else {

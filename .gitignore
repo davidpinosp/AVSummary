@@ -30,7 +30,6 @@ dist/
 build/
 
 prototype.py
-
-keys.txt
+keys.py
 
 .DS_Store.env

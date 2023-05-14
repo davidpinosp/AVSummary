@@ -45,6 +45,12 @@
         <ul class="navbar-nav ms-auto">
           {% if user.is_authenticated %}
           <li class="nav-item">
+            <a class="nav-link mx-2" href="/main">Summarizer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/notes">History</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link mx-2" href="/logout">Log Out</a>
           </li>
           {% else %}
