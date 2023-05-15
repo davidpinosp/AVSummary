@@ -2,10 +2,10 @@ import os
 from google.cloud import speech_v1p1beta1 as speech
 import keys
 import openai
-# Set up Google Cloud credentials
+import json
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv(
-    'GOOGLE_APPLICATION_CREDENTIALS')
+
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/davidpinosproano/Desktop/keys.json'
 
 
 def transcribe_audio(audio_file):
@@ -35,7 +35,7 @@ def transcribe_audio(audio_file):
 
 def summarize_text(text):
 
-    openai.api_key = keys.API_KEY
+    openai.api_key = os.getenv('API_KEY')
 
     response = openai.Completion.create(
         engine="text-davinci-003",
