@@ -31,7 +31,7 @@ def save_input():
     print("Input value:", note)
     # You can store the value in a database, send it to another route, or perform any other operation here
     if len(note) < 1:
-        flash('ID is too short!', category='error')
+        flash('Please Generate a Summary!', category='error')
     else:
         # providing the schema for the note
         new_note = Note(data=note, user_id=current_user.id)
@@ -72,8 +72,6 @@ def process_audio():
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
-    # get_points(1718560715)
-    # this function expects a JSON from the INDEX.js file
     note = json.loads(request.data)
     noteId = note['noteId']
     note = Note.query.get(noteId)

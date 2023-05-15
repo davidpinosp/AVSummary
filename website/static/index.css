@@ -20,8 +20,19 @@ body {
     background-position: 0% 50%;
   }
 }
+
 /* Text BOX */
 .box {
+  width: 800px;
+  height: 700px;
+  background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 50px auto;
+  overflow: hidden;
+  text-align: center;
+}
+.box2 {
   width: 800px;
   height: 700px;
   background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
@@ -35,6 +46,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px auto;
+  text-align: center;
   background-color: #1d41b6; /* Modern green background color */
   color: #fff; /* Text color */
   border-radius: 5px; /* Rounded corners */
@@ -105,4 +117,26 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*  terxt area */
+
+.roundtxt {
+  background-color: rgba(235, 235, 235, 0.5);
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  height: 200px;
+  width: 400px;
+
+  margin-bottom: 20px;
+}
+#audioFileInput {
+  border-radius: 10px;
+  background-color: rgba(235, 235, 235, 0.5);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

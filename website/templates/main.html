@@ -1,16 +1,23 @@
 {%extends "index.html"%} {%block main%}
 
-<div class="box">
+<div class="box2">
   <h1>Speech-to-Text</h1>
 
   <form enctype="multipart/form-data">
     <input type="file" id="audioFileInput" name="audioFile" />
-    <button type="button" id="uploadButton">Upload</button>
+    <button class="btn2" type="button" id="uploadButton">Upload</button>
   </form>
+
   <form action="/save-input" method="POST">
     <!-- <div id="resultContainer" name="ResultText"></div> -->
-    <textarea id="resultContainer" name="resultText"></textarea>
-    <button type="submit">Save</button>
+    <div class="center">
+      <textarea
+        id="resultContainer"
+        class="roundtxt"
+        name="resultText"
+      ></textarea>
+    </div>
+    <button class="btn2" type="submit">Save</button>
   </form>
 
   <script>
