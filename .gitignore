@@ -13,7 +13,7 @@ instance/
 
 # Environment related
 .env/
-
+env/
 # Logs
 *.log
 
